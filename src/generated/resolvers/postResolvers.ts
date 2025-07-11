@@ -22,8 +22,5 @@ export const postResolvers = {
       await prisma.post.delete({ where: { id } });
       return true;
     }
-  },
-  Post: {
-    user: (parent: Post) => prisma.user.findUnique({ where: { id: parent.userId } })
   }
 };

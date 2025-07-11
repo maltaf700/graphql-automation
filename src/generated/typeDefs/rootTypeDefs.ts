@@ -1,16 +1,16 @@
 import gql from "graphql-tag";
+    import { reviewsTypeDefs } from "./reviewsTypeDefs";
 import { userTypeDefs } from "./userTypeDefs";
 import { postTypeDefs } from "./postTypeDefs";
-import { reviewsTypeDefs } from "./reviewsTypeDefs";
 
-export const rootTypeDefs = gql`
-  type Query
-  type Mutation
-`;
+    export const rootTypeDefs = gql`
+    type Query
+    type Mutation
+    `;
 
-export const typeDefs = [
-  rootTypeDefs,
+    export const typeDefs = [
+    rootTypeDefs,
+    reviewsTypeDefs,
   userTypeDefs,
-  postTypeDefs,
-  reviewsTypeDefs
-];
+  postTypeDefs
+    ];

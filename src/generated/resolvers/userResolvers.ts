@@ -22,8 +22,5 @@ export const userResolvers = {
       await prisma.user.delete({ where: { id } });
       return true;
     }
-  },
-  User: {
-    post: (parent: User) => prisma.post.findMany({ where: { userId: parent.id } })
   }
 };
